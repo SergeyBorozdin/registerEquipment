@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipment Detail</title>
+</head>
+<body>
+    <h1>{{ equipment.name }}</h1>
+    <p>Dimensions: {{ equipment.dimension1 }} x {{ equipment.dimension2 }} x {{ equipment.dimension3 }}</p>
+    <p>Supplier Art: {{ equipment.supplier_art }}</p>
+    <p>Quantity: {{ equipment.quantity }}</p>
+    <p>Storage Location: {{ equipment.storage_location }}</p>
+    <img src="{{ equipment.photo.url }}" alt="{{ equipment.name }}">
+    <a href="{% url 'equipment_edit' pk=equipment.pk %}">Edit</a>
+</body>
+</html>
